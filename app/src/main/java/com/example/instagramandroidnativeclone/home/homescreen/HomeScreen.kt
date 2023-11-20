@@ -26,8 +26,6 @@ fun HomeScreen(){
             modifier = Modifier
                 .fillMaxWidth()
                 .fillMaxHeight(.93f)
-                .border(BorderStroke(2.dp, Color.Blue))
-
         ) {
           HomeNavigation(navController)
         }

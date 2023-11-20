@@ -5,6 +5,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.material3.Divider
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -53,13 +54,16 @@ fun BottomBar(navHostController: NavHostController) {
             false
         ),
     )
+    Divider(
+        modifier = Modifier
+            .border(BorderStroke(1.dp, Color.Black))
+    )
     Row(
         horizontalArrangement = Arrangement.SpaceAround,
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .fillMaxWidth()
             .fillMaxHeight()
-            .border(BorderStroke(2.dp, Color.Blue))
     ) {
         bottomNavList.forEach { bottomNavItem->
             Row(
